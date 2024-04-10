@@ -30,5 +30,11 @@ fun main() {
     val string =" kotlin is a cool language "
     println(string.uppercase()) /* toUpperCase() is deprecated. use uppercase() , the most important is to learn the shortcut (Option+ Caps + Enter) */
 
+    // Null value and user Input
+    val number1 = readln() ?:"0"   // if the input is null, it will be assigned to "0" string
+    val number2 = readln() ?:"0"   //
 
+    val result = number2.toInt() + number1.toInt() // question mark Allow to set the variable to null , (do not happen in Java )
+
+    println(result)
 }

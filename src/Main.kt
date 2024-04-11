@@ -15,7 +15,7 @@ fun main() {
     // is like final variable and it's known as immutable in Kotlin
     // and can be initialized only single time
 
-    var num : Int= 3
+    var num: Int = 3
     println("the value of num is $num")
     num = 4
     println("The value of num is now $num ")
@@ -27,14 +27,32 @@ fun main() {
     println("The value of x is $x  and y is $y  and z $z")
 
     //strings
-    val string =" kotlin is a cool language "
+    val string = " kotlin is a cool language "
     println(string.uppercase()) /* toUpperCase() is deprecated. use uppercase() , the most important is to learn the shortcut (Option+ Caps + Enter) */
 
-    // Null value and user Input
-    val number1 = readln() ?:"0"   // if the input is null, it will be assigned to "0" string
-    val number2 = readln() ?:"0"   //
+    //  Null value and user Input
+    //   val number1 = readln() ?:"0"   // if the input is null, it will be assigned to "0" string
+    //   val number2 = readln() ?:"0"   // //   val result = number2.toInt() + number1.toInt() // question mark Allow to set the variable to null , (do not happen in Java )
+    //  println(result)
 
-    val result = number2.toInt() + number1.toInt() // question mark Allow to set the variable to null , (do not happen in Java )
+    //Conditionals
 
-    println(result)
+    val examScore = 55
+    if (examScore > 70) {
+        println("you passed!")
+    } else {
+        println(" you failed :(")
+    }
+    // Collections & loops 
+    val names = mutableListOf<String>("Ali", "Maya", "Chen")  // // Original Listof()
+    println(names[2])   // Collections are immutable , you can not add or delete, if you wanted to add and element
+    // you need to use , mutableListOf();
+    names.add("Dimitri")
+    println(names[3])
+    for (name in names) {
+        println(name)
+    }
+
+
+
 }
